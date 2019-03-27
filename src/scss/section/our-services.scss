@@ -1,0 +1,173 @@
+.our-services {
+  background-color: $our-services-bg;
+  overflow: hidden;
+
+  .our-services-top-part {
+    display: block;
+    text-align: center;
+
+    h5 {
+      font-family: "Raleway";
+      font-size: 30px;
+      font-weight: 700;
+      color: $our-services-h5;
+      padding-top: 100px;
+      margin-bottom: 49px;
+
+      span {
+        color: $our-services-span;
+      }
+    }
+
+    p {
+      font-family: "Lato";
+      font-weight: 700;
+      color: $about-creativia-p-color;
+      font-size: 16px;
+      margin-bottom: 43px;
+
+      span {
+        color: $about-creativia-inside-color;
+      }
+    }
+  }
+
+  .our-services-middle-part {
+    margin-bottom: 100px;
+
+    .contents-block {
+      margin-top: 57px;
+      cursor: pointer;
+
+      @media (max-width: 1199px) {
+        margin: 57px auto 0;
+      }
+
+      &:hover {
+        .head {
+          #hex1 {
+            #color1 {
+              background-color: $our-services-span;
+
+              i {
+                color: $our-services-h5;
+              }
+            }
+          }
+        }
+
+        .contents {
+          background-color: $our-services-span;
+
+          p {
+            color: $our-services-h5;
+          }
+        }
+      }
+
+      .head {
+        @media (max-width: 575px) {
+          margin: 0;
+        }
+
+        p {
+          font-family: "Raleway";
+          font-size: 20px;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: $our-services-h5;
+          padding-top: 23px;
+          padding-left: 33px;
+
+          @media (max-width: 424px) {
+            font-size: 18px;
+            padding-left: 18px;
+          }
+        }
+
+        #hex1 {
+          width: 66px;
+          height: 66px;
+        }
+
+        #color1 {
+          background-color: $our-services-color1;
+
+          i {
+            font-size: 31px;
+            z-index: 15;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #262626;
+          }
+        }
+
+        .hexagon-wrapper {
+          text-align: center;
+          margin-left: 5px;
+          margin-bottom: 29px;
+          position: relative;
+          display: inline-block;
+        }
+
+        .hexagon {
+          height: 100%;
+          width: calc(100% * 0.57735);
+          display: inline-block;
+        }
+
+        .hexagon:before {
+          position: absolute;
+          top: 0;
+          right: calc((100% / 2) - ((100% * 0.57735) / 2));
+          background-color: inherit;
+          height: inherit;
+          width: inherit;
+          content: "";
+          transform: rotateZ(60deg);
+        }
+
+        .hexagon:after {
+          position: absolute;
+          top: 0;
+          right: calc((100% / 2) - ((100% * 0.57735) / 2));
+          background-color: inherit;
+          height: inherit;
+          width: inherit;
+          content: "";
+          transform: rotateZ(-60deg);
+        }
+      }
+      .contents {
+        width: 570px;
+        background-color: $our-services-contents;
+        text-align: justify;
+
+        @media (max-width: 991px) {
+          width: 540px;
+        }
+
+        @media (max-width: 575px) {
+          width: 100%;
+          margin: 0;
+        }
+
+        p {
+          font-family: "Lato";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+          color: $our-services-color1;
+          padding: 35px;
+
+          @media (max-width: 575px) {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

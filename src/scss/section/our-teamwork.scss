@@ -1,0 +1,197 @@
+.our-teamwork {
+  .container {
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      background-image: url(../image/our-product-features-before.png);
+      width: 21px;
+      height: 19px;
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    &:after {
+      content: "";
+      border-bottom: 1px solid $our-product-features-after-color;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 515px;
+      transform: translate(-50%);
+
+      @media (max-width: 515px) {
+        width: 100%;
+      }
+    }
+
+    .our-teamwork-top-part {
+      display: block;
+      text-align: center;
+      overflow: hidden;
+      outline: none;
+
+      h5 {
+        color: $our-teamwork-h5;
+        font-family: "Raleway";
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 51px;
+        margin-top: 99px;
+
+        span {
+          color: $our-teamwork-span;
+        }
+      }
+
+      p {
+        color: $our-teamwork-p;
+        font-family: "Lato";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        margin-bottom: 97px;
+
+        @media (max-width: 575px) {
+          margin-bottom: 50px;
+        }
+
+        span {
+          color: $our-teamwork-span;
+        }
+      }
+    }
+
+    .our-teammwork-middle-part {
+      justify-content: space-between;
+      position: relative;
+
+      .card {
+        border-radius: 0;
+        outline: none;
+        border: 1px solid $our-teamwork-border;
+        cursor: pointer;
+        margin-bottom: 110px;
+
+        @media (max-width: 575px) {
+          margin: 25px 5px;
+        }
+
+        .card-img-top-1,
+        .card-img-top-2,
+        .card-img-top-3,
+        .card-img-top-4 {
+          width: 270px;
+          height: 240px;
+          border-radius: 0;
+          background-color: $our-teamwork-h5;
+          text-align: center;
+
+          #hex1 {
+            width: 41px;
+            height: 41px;
+            margin-top: 100px;
+            display: none;
+          }
+
+          #color1 {
+            background-color: $our-teamwork-color1;
+
+            i {
+              font-size: 24px;
+              color: $our-teamwork-span;
+              z-index: 1;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          .hexagon-wrapper {
+            text-align: center;
+            margin: 0 10px;
+            position: relative;
+            display: inline-block;
+          }
+
+          .hexagon {
+            height: 100%;
+            width: calc(100% * 0.57735);
+            display: inline-block;
+          }
+
+          .hexagon:before {
+            position: absolute;
+            top: 0;
+            right: calc((100% / 2) - ((100% * 0.57735) / 2));
+            background-color: inherit;
+            height: inherit;
+            width: inherit;
+            content: "";
+            transform: rotateZ(60deg);
+          }
+
+          .hexagon:after {
+            position: absolute;
+            top: 0;
+            right: calc((100% / 2) - ((100% * 0.57735) / 2));
+            background-color: inherit;
+            height: inherit;
+            width: inherit;
+            content: "";
+            transform: rotateZ(-60deg);
+          }
+        }
+
+        &:hover {
+          border: 1px solid $our-teamwork-h5;
+
+          .card-img-top-1,
+          .card-img-top-2,
+          .card-img-top-3,
+          .card-img-top-4 {
+            img {
+              display: none;
+            }
+
+            #hex1 {
+              display: inline-block;
+            }
+          }
+
+          .card-body {
+            h5 {
+              color: $our-teamwork-span;
+            }
+          }
+        }
+
+        .card-body {
+          text-align: center;
+          padding: 34px;
+
+          h5 {
+            color: $our-teamwork-h5;
+            font-family: "Raleway";
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+          }
+
+          p {
+            color: $our-teamwork-p;
+            font-family: "Lato";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}

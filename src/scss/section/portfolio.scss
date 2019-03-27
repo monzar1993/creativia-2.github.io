@@ -1,0 +1,148 @@
+.portfolio {
+  text-align: center;
+  background: $portfolio-gb-color;
+  overflow: hidden;
+
+  .container {
+    h4 {
+      color: $portfolio-h4-color;
+      font-family: "Raleway";
+      font-size: 30px;
+      font-weight: 700;
+      margin-top: 99px;
+      margin-bottom: 27px;
+
+      @media (max-width: 575px) {
+        margin-top: 50px;
+      }
+    }
+
+    .tabs {
+      justify-content: center;
+      margin-bottom: 99px;
+
+      @media (max-width: 575px) {
+        margin-bottom: 50px;
+      }
+
+      #list-tab {
+        @media (max-width: 575px) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .list-group-item {
+          @media (min-width: 576px) and (max-width: 767px) {
+            padding: 0;
+          }
+
+          @media (max-width: 424px) {
+            padding: 7px;
+          }
+        }
+      }
+
+      a {
+        background: $portfolio-a-bg-color;
+        border: none;
+        color: $portfolio-a-color;
+        font-family: "Lato";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $portfolio-a-hover;
+        }
+
+        &.active {
+          color: $portfolio-a-hover;
+        }
+      }
+    }
+  }
+
+  .portfolio-images {
+    &:last-of-type {
+      margin-bottom: 109px;
+    }
+    .image-1,
+    .image-2,
+    .image-3,
+    .image-4,
+    .image-5,
+    .image-6,
+    .image-7,
+    .image-8 {
+      @include portfolio-img-bg-block;
+      padding: 0;
+
+      @media (max-width: 575px) {
+        height: 260px;
+      }
+
+      @media (max-width: 424px) {
+        height: 200px;
+      }
+
+      img {
+        display: none;
+        margin-top: 157px;
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      p {
+        display: none;
+        color: $portfolio-h4-color;
+        font-family: "Lato";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        position: relative;
+      }
+
+      .main-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0;
+        object-fit: cover;
+      }
+
+      &:hover {
+        a {
+          outline: none;
+          img {
+            display: inline;
+            z-index: 5;
+          }
+        }
+
+        .main-img {
+          position: absolute;
+          top: 0;
+          opacity: 0.7;
+        }
+
+        p {
+          display: inherit;
+          z-index: 5;
+        }
+        &:after {
+          content: "";
+          width: 100%;
+          height: 351px;
+          z-index: 1;
+          background-color: rgba($portfolio-box-bg, 0.8);
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
