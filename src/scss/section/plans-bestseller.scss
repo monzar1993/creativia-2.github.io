@@ -32,35 +32,24 @@
     overflow: hidden;
     outline: none;
 
+    @include head-styles;
+
     h5 {
-      color: $our-plans-bestseller-h5;
-      font-family: "Raleway";
-      font-size: 30px;
-      font-weight: 700;
-      margin-bottom: 50px;
-      margin-top: 100px;
-
-      span {
-        color: $our-plans-bestseller-span;
+        @media (max-width: 424px) {
+        padding-top: 0;
       }
-    }
-
-    p {
-      color: $our-plans-bestseller-p;
-      font-family: "Lato";
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 22px;
-      margin-bottom: 100px;
-
-      span {
-        color: $our-plans-bestseller-span;
       }
-    }
   }
 
   .plans-bestseller-middle-part {
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1199px) {
+       flex-wrap: wrap;
+       justify-content: center;
+      }
 
     .price {
       p {
@@ -181,6 +170,7 @@
           line-height: 1.65px;
           text-transform: uppercase;
           border-radius: 0;
+          border: none;
         }
       }
     }

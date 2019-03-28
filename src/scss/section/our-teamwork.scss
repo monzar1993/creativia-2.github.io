@@ -34,40 +34,24 @@
       overflow: hidden;
       outline: none;
 
+      @include head-styles;
+
       h5 {
-        color: $our-teamwork-h5;
-        font-family: "Raleway";
-        font-size: 30px;
-        font-weight: 700;
-        margin-bottom: 51px;
-        margin-top: 99px;
-
-        span {
-          color: $our-teamwork-span;
-        }
+        @media (max-width: 424px) {
+        padding-top: 0;
       }
-
-      p {
-        color: $our-teamwork-p;
-        font-family: "Lato";
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 22px;
-        margin-bottom: 97px;
-
-        @media (max-width: 575px) {
-          margin-bottom: 50px;
-        }
-
-        span {
-          color: $our-teamwork-span;
-        }
       }
     }
 
     .our-teammwork-middle-part {
+      display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       position: relative;
+
+      @media (max-width: 767px) {
+        justify-content: center;
+      }
 
       .card {
         border-radius: 0;
@@ -78,6 +62,10 @@
 
         @media (max-width: 575px) {
           margin: 25px 5px;
+        }
+
+        @media (max-width: 767px) {
+          margin-bottom: 40px;
         }
 
         .card-img-top-1,

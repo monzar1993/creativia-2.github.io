@@ -14,6 +14,10 @@
       padding-top: 100px;
       margin-bottom: 49px;
 
+      @media (max-width:991px) {
+        padding-top: 50px;
+      }
+
       span {
         color: $our-services-span;
       }
@@ -34,10 +38,14 @@
 
   .our-services-middle-part {
     margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
     .contents-block {
       margin-top: 57px;
       cursor: pointer;
+      padding:5px;
 
       @media (max-width: 1199px) {
         margin: 57px auto 0;
@@ -76,8 +84,6 @@
           font-weight: 500;
           text-transform: uppercase;
           color: $our-services-h5;
-          padding-top: 23px;
-          padding-left: 33px;
 
           @media (max-width: 424px) {
             font-size: 18px;
@@ -108,7 +114,6 @@
         .hexagon-wrapper {
           text-align: center;
           margin-left: 5px;
-          margin-bottom: 29px;
           position: relative;
           display: inline-block;
         }

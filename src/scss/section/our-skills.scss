@@ -29,34 +29,18 @@
   .our-skills-top {
     text-align: center;
     display: block;
-    h5 {
-      font-family: "Raleway";
-      font-size: 30px;
-      font-weight: 700;
-      color: $our-skills-h5;
-      padding-top: 100px;
-      margin-bottom: 49px;
-
-      span {
-        color: $our-skills-span;
-      }
-    }
-
-    p {
-      font-family: "Lato";
-      font-weight: 700;
-      color: $about-creativia-p-color;
-      font-size: 16px;
-      margin-bottom: 100px;
-
-      span {
-        color: $about-creativia-inside-color;
-      }
-    }
+    
+    @include head-styles;
   }
 
   .our-skills-main {
     margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+      }
 
     .skill {
       margin: 0 20px;

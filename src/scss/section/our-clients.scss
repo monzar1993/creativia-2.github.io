@@ -43,95 +43,123 @@
     margin-bottom: 24px;
     outline: none;
     text-align: center;
+    display: flex;
 
-    .photo-hrefs {
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+
+    .our-clients-middle-left {
+      width: 50%;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+
+      h6 {
+        color: $our-clients-h5;
+        font-family: "Raleway";
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 33px;
+        margin-top: 0;
+      }
+
+      .our-clients-slider {
+        justify-content: center;
+        height: 124px;
+        outline: none;
+
+        .slick-list {
+          @media (max-width: 1199px) {
+            height: 250px;
+          }
+        }
+
+        .slide-comment {
+          width: 200px;
+          height: 200px;
+          padding: 0 20px;
+
+          p {
+            color: #a4a4a4;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            margin-bottom: 47px;
+            margin-top: 0;
+          }
+
+          img {
+            margin: 0 auto;
+          }
+
+          .name {
+            color: #ff0036;
+            font-family: "Raleway";
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 17px;
+          }
+        }
+
+        .slick-dots {
+          bottom: -75%;
+
+          @media (max-width: 1199px) {
+            bottom: -100%;
+          }
+
+          @media (max-width: 767px) {
+            bottom: -75%;
+          }
+
+          @media (max-width: 575px) {
+            bottom: -90%;
+          }
+
+          @media (max-width: 424px) {
+            bottom: -100%;
+          }
+
+          li {
+            width: 8px;
+            height: 8px;
+            background-color: #e0e0e0;
+
+            &.slick-active {
+              background-color: #ff0036;
+            }
+          }
+        }
+      }
+    }
+
+    .our-clients-middle-right {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      outline: none;
+      width: 50%;
+
       @media (max-width: 767px) {
         padding-top: 100px;
+        width: 100%;
       }
 
       @media (max-width: 575px) {
         padding-top: 140px;
       }
-    }
-
-    h6 {
-      color: $our-clients-h5;
-      font-family: "Raleway";
-      font-size: 20px;
-      font-weight: 500;
-      text-transform: uppercase;
-      margin-bottom: 49px;
-    }
-
-    .our-clients-slider {
-      justify-content: center;
-      height: 124px;
-      outline: none;
-
-      #carouselExampleIndicators {
-        outline: none;
-
-        .carousel-indicators {
-          width: 50px;
-          outline: none;
-          left: 30.4%;
-
-          li {
-            width: 8px;
-            height: 8px;
-            background-color: $our-clients-li;
-            outline: none;
-
-            &.active {
-              background-color: $our-clients-span;
-            }
-          }
-        }
-        .carousel-item {
-          .middle-left-top-part {
-            display: block;
-            text-align: center;
-            margin-bottom: 47px;
-            outline: none;
-
-            p {
-              color: $our-clients-p;
-              font-family: "Lato";
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 22px;
-              margin-bottom: 30px;
-            }
-
-            img {
-              width: 65px;
-              margin: 0 auto;
-            }
-
-            .client-name {
-              color: $our-clients-span;
-              font-family: "Raleway";
-              font-size: 16px;
-              font-weight: 700;
-              text-transform: uppercase;
-              margin-bottom: 0;
-              margin-top: 17px;
-              padding-bottom: 10px;
-            }
-          }
-        }
-      }
-    }
-
-    .middle-right-part {
-      justify-content: space-between;
-      outline: none;
 
       a {
         color: $our-clients-a;
+        text-decoration: none;
 
-        &:hover {
-          text-decoration: none;
+        @media (max-width: 767px) {
+          margin: 0 auto;
         }
 
         .photobank {

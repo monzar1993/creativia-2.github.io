@@ -18,65 +18,81 @@
     }
 
     .tabs {
+      display: flex;
       justify-content: center;
-      margin-bottom: 99px;
+      list-style: none;
+      margin-bottom: 100px;
 
       @media (max-width: 575px) {
-        margin-bottom: 50px;
+        padding-left: 0;
       }
 
-      #list-tab {
-        @media (max-width: 575px) {
-          display: flex;
-          flex-wrap: wrap;
-        }
-
-        .list-group-item {
-          @media (min-width: 576px) and (max-width: 767px) {
-            padding: 0;
-          }
-
-          @media (max-width: 424px) {
-            padding: 7px;
-          }
-        }
+      @media (max-width: 424px) {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
       }
 
-      a {
-        background: $portfolio-a-bg-color;
-        border: none;
-        color: $portfolio-a-color;
+      li {
         font-family: "Lato";
         font-size: 16px;
         font-weight: 700;
         line-height: 22px;
         text-transform: uppercase;
+        color: #a4a4a4;
+        padding: 0 10px;
 
-        &:hover {
-          color: $portfolio-a-hover;
-        }
+        @media (max-width: 575px) {
+        padding: 0 5px;
+      }
+
+      @media (max-width: 424px) {
+        width: 100%;
+        padding: 10px 20px;
+      }
 
         &.active {
-          color: $portfolio-a-hover;
+          color: #ff0036;
         }
       }
     }
   }
 
   .portfolio-images {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
     &:last-of-type {
       margin-bottom: 109px;
     }
-    .image-1,
-    .image-2,
-    .image-3,
-    .image-4,
-    .image-5,
-    .image-6,
-    .image-7,
-    .image-8 {
+    .portfolio-image {
       @include portfolio-img-bg-block;
       padding: 0;
+
+      &:nth-child(1),
+      &:nth-child(3),
+      &:nth-child(6),
+      &:nth-child(8) {
+        grid-column: 3 span;
+
+        @media (max-width: 768px) {
+          grid-column: 4 span;
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(7) {
+        grid-column: 2 span;
+
+        @media (max-width: 768px) {
+          grid-column: 3 span;
+        }
+      }
 
       @media (max-width: 575px) {
         height: 260px;

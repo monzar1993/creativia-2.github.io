@@ -33,31 +33,13 @@
     overflow: hidden;
     outline: none;
 
+    @include head-styles;
+
     h5 {
-      color: $find-us-here-h5;
-      font-family: "Raleway";
-      font-size: 30px;
-      font-weight: 700;
-      margin-bottom: 50px;
-      margin-top: 100px;
-
-      span {
-        color: $find-us-here-span;
+        @media (max-width: 424px) {
+        padding-top: 0;
       }
-    }
-
-    p {
-      color: $find-us-here-p;
-      font-family: "Lato";
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 22px;
-      margin-bottom: 97px;
-
-      span {
-        color: $find-us-here-span;
       }
-    }
   }
 
   .find-us-here-middle-part {
@@ -66,6 +48,7 @@
     overflow: hidden;
     background-size: cover;
     position: relative;
+    display: flex;
 
     #googlemaps {
       height: 100%;
@@ -86,6 +69,7 @@
       margin-top: 251px;
       margin-left: 250px;
       padding: 0;
+      width: 300px;
 
       @media (max-width: 767px) {
         display: none;
@@ -126,6 +110,13 @@
       margin-top: 100px;
       padding: 0;
       margin-left: 25px;
+      z-index: 1;
+      width: 470px;
+      height: 475px;
+
+      @media (max-width: 991px) {
+        margin-right: 10px;
+      }
 
       @media (max-width: 767px) {
         margin: 20px auto;
@@ -174,6 +165,11 @@
             font-weight: 400;
             line-height: 25px;
             margin-bottom: 17px;
+            width: 100%;
+
+            &::placeholder {
+              padding-left: 10px;
+            }
           }
 
           textarea {
@@ -188,6 +184,7 @@
             font-weight: 400;
             line-height: 25px;
             width: 100%;
+            padding: 0;
           }
 
           .submit-button {
@@ -200,7 +197,7 @@
             font-weight: 400;
             text-transform: uppercase;
             margin-bottom: 48px;
-            margin-top: 27px;
+            margin-top: 10px;
             outline: none;
             border-radius: 0;
             border: none;

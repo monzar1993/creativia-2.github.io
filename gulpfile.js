@@ -3,7 +3,7 @@
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
+    // sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
@@ -70,12 +70,12 @@ gulp.task('css:build', function(){
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(sass({
             sourceMap: true,
             errLogToConsole: true
         }))
-          .pipe(sourcemaps.write())
+        //   .pipe(sourcemaps.write())
           .pipe(
             autoprefixer({
               browsers: ["last 2 versions"],

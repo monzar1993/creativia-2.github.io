@@ -2,3 +2,34 @@
   height: 351px;
   position: relative;
 }
+
+@mixin head-styles {
+      h5 {
+      font-family: "Raleway";
+      font-weight: 700;
+      color: $about-creativia-h5-color;
+      padding-top: 100px;
+      margin-bottom: 50px;
+      font-size: 30px;
+      margin-top: 0;
+
+      @media (max-width: 424px) {
+        margin-top: 70px;
+      }
+
+      span {
+        color: $about-creativia-inside-color;
+      }
+    }
+    p {
+      font-family: "Lato";
+      font-weight: 700;
+      color: $about-creativia-p-color;
+      font-size: 16px;
+      margin-bottom: 100px;
+
+      span {
+        color: $about-creativia-inside-color;
+      }
+    }
+}

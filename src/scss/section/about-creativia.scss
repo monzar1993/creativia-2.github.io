@@ -7,36 +7,24 @@
   }
 
   .top-part {
+    @include head-styles;
+
     h5 {
-      font-family: "Raleway";
-      font-weight: 700;
-      color: $about-creativia-h5-color;
-      margin-top: 100px;
-      margin-bottom: 49px;
-      font-size: 30px;
-
       @media (max-width: 424px) {
-        margin-top: 70px;
-      }
-
-      span {
-        color: $about-creativia-inside-color;
+        padding-top: 0;
       }
     }
     p {
-      font-family: "Lato";
-      font-weight: 700;
-      color: $about-creativia-p-color;
-      font-size: 16px;
-
-      span {
-        color: $about-creativia-inside-color;
+      @media (max-width: 575px) {
+        margin-bottom: 0;
       }
     }
   }
   .middle-part {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 100px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     position: relative;
 
     @media (max-width: 767px) {
@@ -47,17 +35,6 @@
       margin-bottom: 60px;
     }
 
-    .accordion {
-      @media (max-width: 991px) {
-        width: 80%;
-        margin: 0 auto;
-      }
-
-      @media (max-width: 767px) {
-        width: 100%;
-        margin: 0 auto;
-      }
-    }
     &:after {
       content: "";
       display: block;
@@ -65,6 +42,10 @@
       width: 21px;
       height: 19px;
       margin: 100px auto 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
     }
 
     &:before {
@@ -72,6 +53,7 @@
       border-bottom: 1px solid $about-creativia-accordion-before-color;
       position: absolute;
       bottom: 9px;
+      left: 50%;
       width: 515px;
       transform: translate(-50%);
 
@@ -80,96 +62,117 @@
       }
     }
 
-    p {
-      font-family: "Lato";
-      font-weight: 500;
-      color: $about-creativia-p-color;
-      font-size: 16px;
-      text-align: justify;
-      margin-bottom: 44px;
-    }
-    .card {
-      margin: 20px 0;
-      border-radius: 0;
-      border-bottom: 1px solid $about-creativia-card-border-color;
+    .middle-left {
+      width: 50%;
 
-      .card-header {
-        padding: 0;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
 
-        &:focus {
-          outline: none;
+      p {
+        font-family: "Lato";
+        font-weight: 500;
+        color: $about-creativia-p-color;
+        font-size: 16px;
+        text-align: justify;
+        margin-bottom: 44px;
+
+        @media (max-width: 991px) {
+          text-align: center;
+          margin: 0 auto 44px;
+        }
+      }
+
+      .cards {
+        width: 100%;
+
+        @media (max-width: 991px) {
+          width: 60%;
+          margin: 0 auto;
         }
 
-        h5 {
-          &:focus {
-            outline: none;
-          }
-          .btn-link {
-            font-family: "Raleway";
-            font-weight: 500;
-            font-size: 20px;
-            color: $about-creativia-active-name-color;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            width: 100%;
+        @media (max-width: 767px) {
+          width: 80%;
+          margin: 0 auto;
+        }
 
-            &:after {
-              content: "";
-              border-left: 1px solid $about-creativia-card-border-color;
-              height: 44px;
-              position: absolute;
-              top: 0;
-              left: 53px;
+        .card {
+          margin-bottom: 9px;
+
+          .toggle-button {
+            color: $about-creativia-h5-color;
+            font-family: "Raleway";
+            font-size: 20px;
+            font-weight: 500;
+            border: 1px solid #e7e7e7;
+            background-color: #f7f7f7;
+            color: #262626;
+            padding: 10px 90px 10px 10px;
+            margin: 0;
+            text-align: left;
+
+            @media (max-width: 424px) {
+              padding: 10px 30px 10px 10px;
+              font-size: 18px;
             }
 
             .fa-plus {
-              display: none;
-            }
-            .fa-plus,
-            .fa-minus {
+              border: 1px solid #505050;
+              color: #505050;
               margin-right: 21px;
-              border: 1px solid $about-creativia-open-plus-minus-colors;
               border-radius: 50%;
               padding: 2px 3px;
-              color: $about-creativia-open-plus-minus-colors;
             }
 
-            &.collapsed {
-              color: $about-creativia-collapsed-name-color;
+            .fa-minus {
+              display: none;
+            }
+
+            &.active {
+              color: #ff0036;
 
               .fa-plus {
-                display: inline-block;
-                border: 1px solid $about-creativia-collapsed-plus-minus-colors;
-                color: $about-creativia-collapsed-plus-minus-colors;
-              }
-
-              .fa-minus {
                 display: none;
+              }
+              .fa-minus {
+                display: inline-block;
+                border: 1px solid #ff0036;
+                color: #ff0036;
+                margin-right: 21px;
+                border-radius: 50%;
+                padding: 2px 3px;
               }
             }
           }
-        }
 
-        .card-body {
-          font-family: "Lato";
-          font-weight: 500;
-          font-size: 14px;
-          text-align: justify;
-          color: $about-creativia-card-body-color;
+          .card-content {
+            display: none;
+            color: #505050;
+            font-family: "Lato";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            border: 1px solid #e7e7e7;
+            background-color: #fff;
+            padding: 18px;
+            text-align: justify;
+            border-top: none;
+          }
         }
       }
     }
 
     .middle-right {
-      height: 363px;
+      width: 50%;
+      position: relative;
 
       @media (max-width: 991px) {
         order: -1;
         margin-bottom: 40px;
+        width: 100%;
       }
 
-      @media (max-width: 535px) {
+      @media (max-width: 575px) {
         margin-bottom: 0;
       }
 
@@ -181,14 +184,14 @@
         width: 346px;
         height: 299px;
         position: relative;
-        margin: 50px auto;
+        margin: 0 auto 50px;
         transform: rotate(0deg);
 
         @media (max-width: 991px) {
           margin: 0 auto;
         }
 
-        @media (max-width: 535px) {
+        @media (max-width: 575px) {
           width: 250px;
           margin: 20px auto;
         }
@@ -261,7 +264,28 @@
       }
     }
   }
+
   .bottom-part {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .hexagon-group-block {
+      @media (max-width: 1199px) {
+        width: 250px;
+      }
+
+      @media (max-width: 991px) {
+        margin-top: 40px;
+      }
+    }
+
     .hexagon {
       display: inline-block;
       cursor: pointer;
@@ -367,6 +391,11 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 22px;
+
+      @media (max-width: 1199px) {
+        width: 80%;
+        margin: 0 auto;
+      }
 
       @media (max-width: 575px) {
         margin-bottom: 35px;
