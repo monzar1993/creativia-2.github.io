@@ -61,7 +61,15 @@
       margin-top: 75px;
 
       @media (max-width: 1199px) {
-        margin: 0 auto;
+        margin: 0 25px;
+      }
+
+      @media (max-width: 991px) {
+        width: 60%;
+
+        &:last-of-type {
+          margin-top: 0;
+        }
       }
 
       @media (max-width: 767px) {
@@ -235,6 +243,10 @@
         box-shadow: none;
 
         @media (max-width: 575px) {
+          bottom: 13%;
+        }
+
+        @media (max-width: 424px) {
           bottom: 26%;
         }
 
