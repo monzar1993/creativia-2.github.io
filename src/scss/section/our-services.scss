@@ -14,7 +14,7 @@
       padding-top: 100px;
       margin-bottom: 49px;
 
-      @media (max-width:991px) {
+      @media (max-width: 991px) {
         padding-top: 50px;
       }
 
@@ -45,7 +45,7 @@
     .contents-block {
       margin-top: 57px;
       cursor: pointer;
-      padding:5px;
+      padding: 5px;
 
       @media (max-width: 1199px) {
         margin: 57px auto 0;
@@ -147,7 +147,7 @@
         }
       }
       .contents {
-        width: 570px;
+        width: 550px;
         background-color: $our-services-contents;
         text-align: justify;
 

@@ -64,6 +64,7 @@
 
     .middle-left {
       width: 50%;
+      padding: 0 5px;
 
       @media (max-width: 991px) {
         width: 100%;
@@ -165,6 +166,7 @@
     .middle-right {
       width: 50%;
       position: relative;
+      padding: 0 5px;
 
       @media (max-width: 991px) {
         order: -1;
@@ -277,6 +279,8 @@
     }
 
     .hexagon-group-block {
+      width: 25%;
+
       @media (max-width: 1199px) {
         width: 250px;
       }
@@ -380,6 +384,7 @@
       font-size: 20px;
       font-weight: 500;
       text-transform: uppercase;
+      word-break: break-word;
 
       @media (max-width: 575px) {
         margin: 13px 0 5px;
@@ -391,6 +396,7 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 22px;
+      word-break: break-word;
 
       @media (max-width: 1199px) {
         width: 80%;

@@ -1,19 +1,27 @@
 @charset "UTF-8";
 button:focus {
-  outline: none;
   -webkit-box-shadow: none !important;
   box-shadow: none !important; }
 
 body {
   margin: 0; }
+
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 button:focus {
-  outline: none;
   -webkit-box-shadow: none !important;
   box-shadow: none !important; }
 
 body {
   margin: 0; }
+
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 /* raleway-regular - latin */
 @font-face {
@@ -111,35 +119,32 @@ body {
   font-style: normal;
   font-weight: normal; }
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-    margin: 0 auto; } }
-
-@media (max-width: 1199px) {
-  .container {
-    width: 960px;
-    margin: 0 auto; } }
-
-@media (max-width: 991px) {
-  .container {
-    width: 720px;
-    margin: 0 auto; } }
-
-@media (max-width: 767px) {
-  .container {
-    width: 540px;
-    margin: 0 auto; } }
-
-@media (max-width: 575px) {
-  .container {
-    width: 410px;
-    margin: 0 auto; } }
-
-@media (max-width: 424px) {
-  .container {
-    width: 300px;
-    margin: 0 auto; } }
+.container {
+  padding: 0 15px; }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+      margin: 0 auto; } }
+  @media (max-width: 1199px) {
+    .container {
+      width: 960px;
+      margin: 0 auto; } }
+  @media (max-width: 991px) {
+    .container {
+      width: 720px;
+      margin: 0 auto; } }
+  @media (max-width: 767px) {
+    .container {
+      width: 540px;
+      margin: 0 auto; } }
+  @media (max-width: 575px) {
+    .container {
+      width: 410px;
+      margin: 0 auto; } }
+  @media (max-width: 424px) {
+    .container {
+      width: 300px;
+      margin: 0 auto; } }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2484,20 +2489,19 @@ header {
     @media (max-width: 991px) {
       header .logo-img-nav {
         margin-left: 0; } }
-    header .logo-img-nav a.nav-link {
-      padding: 0; }
-      header .logo-img-nav a.nav-link img {
-        position: absolute;
-        top: -3px;
-        left: 0; }
-        @media (max-width: 991px) {
-          header .logo-img-nav a.nav-link img {
-            left: 50%;
-            -webkit-transform: translate(-50%);
-            transform: translate(-50%); } }
-        @media (max-width: 424px) {
-          header .logo-img-nav a.nav-link img {
-            width: 200px; } }
+    header .logo-img-nav .nav-link {
+      padding: 0;
+      position: absolute;
+      top: -3px;
+      left: 0; }
+      @media (max-width: 991px) {
+        header .logo-img-nav .nav-link {
+          left: 50%;
+          -webkit-transform: translate(-50%);
+          transform: translate(-50%); } }
+      @media (max-width: 424px) {
+        header .logo-img-nav .nav-link {
+          width: 200px; } }
   header .navbar {
     background: #08080c;
     padding-left: 29%; }
@@ -2515,25 +2519,38 @@ header {
           display: inline-block;
           background: #a4a4a4;
           padding-bottom: 6px;
-          width: 45px;
+          width: 42px;
           height: 35px;
           z-index: 1;
           border-radius: 15%;
           margin-top: 10px;
-          margin-left: 10px; } }
+          margin-left: 10px;
+          padding-bottom: 0; } }
       @media (max-width: 575px) {
         header .navbar .navbar-toggler {
           margin-left: 10px; } }
-      @media (max-width: 424px) {
-        header .navbar .navbar-toggler {
-          width: 45px;
-          height: 35px;
-          padding: 0 0 4px 0px; } }
       header .navbar .navbar-toggler .navbar-toggler-icon {
         width: 25px;
         height: 2px;
-        color: #08080c;
-        display: block; }
+        background: #08080c;
+        display: block;
+        position: relative; }
+        header .navbar .navbar-toggler .navbar-toggler-icon:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0px;
+          border-bottom: 2px solid #08080c;
+          width: 25px;
+          height: 8px; }
+        header .navbar .navbar-toggler .navbar-toggler-icon:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0px;
+          border-top: 2px solid #08080c;
+          width: 25px;
+          height: 8px; }
     header .navbar ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2542,6 +2559,11 @@ header {
       @media (max-width: 1199px) {
         header .navbar ul {
           padding-left: 0; } }
+      @media (min-width: 992px) {
+        header .navbar ul {
+          display: -webkit-box !important;
+          display: -ms-flexbox !important;
+          display: flex !important; } }
       @media (max-width: 991px) {
         header .navbar ul {
           margin: 0;
@@ -2844,7 +2866,8 @@ header {
         .about-creativia .middle-part:before {
           width: 100%; } }
     .about-creativia .middle-part .middle-left {
-      width: 50%; }
+      width: 50%;
+      padding: 0 5px; }
       @media (max-width: 991px) {
         .about-creativia .middle-part .middle-left {
           width: 100%; } }
@@ -2919,7 +2942,8 @@ header {
             border-top: none; }
     .about-creativia .middle-part .middle-right {
       width: 50%;
-      position: relative; }
+      position: relative;
+      padding: 0 5px; }
       @media (max-width: 991px) {
         .about-creativia .middle-part .middle-right {
           -webkit-box-ordinal-group: 0;
@@ -3012,12 +3036,14 @@ header {
         -ms-flex-pack: center;
         justify-content: center;
         margin-top: 50px; } }
-    @media (max-width: 1199px) {
-      .about-creativia .bottom-part .hexagon-group-block {
-        width: 250px; } }
-    @media (max-width: 991px) {
-      .about-creativia .bottom-part .hexagon-group-block {
-        margin-top: 40px; } }
+    .about-creativia .bottom-part .hexagon-group-block {
+      width: 25%; }
+      @media (max-width: 1199px) {
+        .about-creativia .bottom-part .hexagon-group-block {
+          width: 250px; } }
+      @media (max-width: 991px) {
+        .about-creativia .bottom-part .hexagon-group-block {
+          margin-top: 40px; } }
     .about-creativia .bottom-part .hexagon {
       display: inline-block;
       cursor: pointer; }
@@ -3091,7 +3117,8 @@ header {
       font-family: "Raleway";
       font-size: 20px;
       font-weight: 500;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      word-break: break-word; }
       @media (max-width: 575px) {
         .about-creativia .bottom-part h6 {
           margin: 13px 0 5px; } }
@@ -3100,7 +3127,8 @@ header {
       font-family: "Lato";
       font-size: 16px;
       font-weight: 400;
-      line-height: 22px; }
+      line-height: 22px;
+      word-break: break-word; }
       @media (max-width: 1199px) {
         .about-creativia .bottom-part p {
           width: 80%;
@@ -3282,7 +3310,7 @@ header {
       margin-top: 0; }
   .our-product-features .our-product-features-main-part {
     margin-top: 102px;
-    margin-bottom: 410px;
+    margin-bottom: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3326,6 +3354,9 @@ header {
           width: 90%; } }
       .our-product-features .our-product-features-main-part .main-part-sides .list-group {
         padding: 0; }
+        @media (max-width: 991px) {
+          .our-product-features .our-product-features-main-part .main-part-sides .list-group {
+            margin: 0; } }
       .our-product-features .our-product-features-main-part .main-part-sides li {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3424,6 +3455,9 @@ header {
           -ms-flex-order: -1;
           order: -1;
           width: 100%; } }
+      @media (max-width: 991px) {
+        .our-product-features .our-product-features-main-part .main-part-middle {
+          margin-bottom: 40px; } }
       @media (max-width: 424px) {
         .our-product-features .our-product-features-main-part .main-part-middle {
           height: 450px; } }
@@ -3603,7 +3637,7 @@ header {
           -webkit-box-shadow: inset 0 0 68px rgba(0, 0, 0, 0.75);
           box-shadow: inset 0 0 68px rgba(0, 0, 0, 0.75);
           background-color: #fff;
-          margin: 0 30px 39px 0;
+          margin: 0 20px 39px 0;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -3701,7 +3735,8 @@ header {
       outline: none;
       border: 1px solid #e7e7e7;
       cursor: pointer;
-      margin-bottom: 110px; }
+      margin-bottom: 110px;
+      width: 272px; }
       @media (max-width: 575px) {
         .our-teamwork .container .our-teammwork-middle-part .card {
           margin: 25px 5px; } }
@@ -3742,6 +3777,16 @@ header {
             left: 50%;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
+          .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-1 #color1:hover,
+          .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-2 #color1:hover,
+          .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-3 #color1:hover,
+          .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-4 #color1:hover {
+            background: #ff0036; }
+            .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-1 #color1:hover i,
+            .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-2 #color1:hover i,
+            .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-3 #color1:hover i,
+            .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-4 #color1:hover i {
+              color: #fff; }
         .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-1 .hexagon-wrapper,
         .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-2 .hexagon-wrapper,
         .our-teamwork .container .our-teammwork-middle-part .card .card-img-top-3 .hexagon-wrapper,
@@ -4067,7 +4112,7 @@ header {
         -webkit-transform: rotateZ(-60deg);
         transform: rotateZ(-60deg); }
       .our-services .our-services-middle-part .contents-block .contents {
-        width: 570px;
+        width: 550px;
         background-color: #343434;
         text-align: justify; }
         @media (max-width: 991px) {
@@ -4634,7 +4679,9 @@ header {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
     .find-us-here .find-us-here-middle-part #googlemaps {
       height: 100%;
       width: 100%;
@@ -4648,7 +4695,7 @@ header {
       background-repeat: no-repeat;
       background-size: contain;
       margin-top: 251px;
-      margin-left: 250px;
+      margin-left: 10%;
       padding: 0;
       width: 300px; }
       @media (max-width: 767px) {
@@ -4683,7 +4730,7 @@ header {
     .find-us-here .find-us-here-middle-part .contact-form {
       margin-top: 100px;
       padding: 0;
-      margin-left: 25px;
+      margin-right: 10%;
       z-index: 1;
       width: 470px;
       height: 475px; }
@@ -4730,15 +4777,10 @@ header {
             font-weight: 400;
             line-height: 25px;
             margin-bottom: 17px;
-            width: 100%; }
-            .find-us-here .find-us-here-middle-part .contact-form form .form-content input::-webkit-input-placeholder {
-              padding-left: 10px; }
-            .find-us-here .find-us-here-middle-part .contact-form form .form-content input:-ms-input-placeholder {
-              padding-left: 10px; }
-            .find-us-here .find-us-here-middle-part .contact-form form .form-content input::-ms-input-placeholder {
-              padding-left: 10px; }
-            .find-us-here .find-us-here-middle-part .contact-form form .form-content input::placeholder {
-              padding-left: 10px; }
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-left: 10px; }
           .find-us-here .find-us-here-middle-part .contact-form form .form-content textarea {
             height: 88px;
             border: 1px solid #e7e7e7;
@@ -4751,7 +4793,10 @@ header {
             font-weight: 400;
             line-height: 25px;
             width: 100%;
-            padding: 0; }
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-left: 10px; }
           .find-us-here .find-us-here-middle-part .contact-form form .form-content .submit-button {
             width: 120px;
             height: 40px;
@@ -4772,10 +4817,13 @@ header {
 footer {
   position: relative;
   background-color: #262626;
-  background-image: url("../image/creativia-bottom-logo.png");
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative; }
+  footer a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
   footer p {
     color: #8e8e8e;
     font-family: "MyriadProRegular";
@@ -4788,7 +4836,8 @@ footer {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    padding: 34px 45px 34px 0; }
+    padding: 34px 45px 34px 0;
+    margin: 0; }
     @media (max-width: 575px) {
       footer p {
         margin: 0;

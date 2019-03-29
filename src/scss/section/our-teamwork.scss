@@ -59,6 +59,7 @@
         border: 1px solid $our-teamwork-border;
         cursor: pointer;
         margin-bottom: 110px;
+        width: 272px;
 
         @media (max-width: 575px) {
           margin: 25px 5px;
@@ -97,6 +98,14 @@
               left: 50%;
               transform: translate(-50%, -50%);
             }
+
+            &:hover {
+                background: $our-teamwork-span;
+
+                i {
+                  color: $our-teamwork-color1;
+                }
+              }
           }
 
           .hexagon-wrapper {

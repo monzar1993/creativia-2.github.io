@@ -38,7 +38,7 @@
 
   .our-product-features-main-part {
     margin-top: 102px;
-    margin-bottom: 410px;
+    margin-bottom: 100px;
     display: flex;
     justify-content: space-between;
 
@@ -88,6 +88,10 @@
 
       .list-group {
         padding: 0;
+
+        @media (max-width: 991px) {
+          margin: 0;
+        }
       }
 
       li {
@@ -206,6 +210,10 @@
       @media (max-width: 1199px) {
         order: -1;
         width: 100%;
+      }
+
+      @media (max-width: 991px) {
+        margin-bottom: 40px;
       }
 
       @media (max-width: 424px) {

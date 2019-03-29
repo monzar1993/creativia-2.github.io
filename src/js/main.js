@@ -3,7 +3,7 @@ $(document).ready(function () {
     // navigation-toggle
     $('.navbar-toggler').click(function () {
         $('.navbar-nav').slideToggle(500, 'linear');
-        $('.navbar-nav').css({ 'display': 'flex' });
+        $('.navbar-nav').css({ 'display': 'flex !important' });
         return false;
     });
 
