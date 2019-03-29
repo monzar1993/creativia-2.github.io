@@ -35,6 +35,12 @@ header {
       @media (max-width: 424px) {
         width: 200px;
       }
+
+      img {
+        @media (max-width: 575px) {
+        width: 100%;
+      }
+      }
     }
   }
 

@@ -2502,6 +2502,9 @@ header {
       @media (max-width: 424px) {
         header .logo-img-nav .nav-link {
           width: 200px; } }
+      @media (max-width: 575px) {
+        header .logo-img-nav .nav-link img {
+          width: 100%; } }
   header .navbar {
     background: #08080c;
     padding-left: 29%; }
@@ -3599,7 +3602,7 @@ header {
               bottom: -90%; } }
           @media (max-width: 424px) {
             .our-clients .our-clients-middle-part .our-clients-middle-left .our-clients-slider .slick-dots {
-              bottom: -100%; } }
+              bottom: -120%; } }
           .our-clients .our-clients-middle-part .our-clients-middle-left .our-clients-slider .slick-dots li {
             width: 8px;
             height: 8px;
