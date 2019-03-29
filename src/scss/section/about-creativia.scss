@@ -112,8 +112,8 @@
             margin: 0;
             text-align: left;
 
-            @media (max-width: 424px) {
-              padding: 10px 30px 10px 10px;
+            @media (max-width: 575px) {
+              padding: 10px;
               font-size: 18px;
             }
 
@@ -180,6 +180,8 @@
 
       @media (max-width: 424px) {
         height: 250px;
+          margin-bottom: -40px;
+        
       }
 
       .hex-image {
@@ -199,7 +201,8 @@
         }
 
         @media (max-width: 424px) {
-          width: 200px;
+          height: 200px;
+          width: 170px;
           margin: 0 auto;
         }
 

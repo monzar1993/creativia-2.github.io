@@ -38,8 +38,8 @@ header {
 
       img {
         @media (max-width: 575px) {
-        width: 100%;
-      }
+          width: 100%;
+        }
       }
     }
   }
@@ -69,40 +69,77 @@ header {
         border-radius: 15%;
         margin-top: 10px;
         margin-left: 10px;
-        padding-bottom: 0;
+        padding-bottom: 3.5px;
       }
 
       @media (max-width: 575px) {
         margin-left: 10px;
       }
 
-      .navbar-toggler-icon {
+      .navbar-toggler-icon,
+      .navbar-toggler-icon:before,
+      .navbar-toggler-icon:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 3px;
         width: 25px;
-        height: 2px;
-        background: #08080c;
+        background: #000;
+        position: absolute;
         display: block;
-        position: relative;
-
-        &:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0px;
-          border-bottom: 2px solid #08080c;
-          width: 25px;
-          height: 8px;
-        }
-
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0px;
-          border-top: 2px solid #08080c;
-          width: 25px;
-          height: 8px;
-        }
+        content: "";
       }
+      .navbar-toggler-icon:before {
+        top: -9px;
+      }
+      .navbar-toggler-icon:after {
+        bottom: -9px;
+      }
+
+      .navbar-toggler-icon,
+      .navbar-toggler-icon:before,
+      .navbar-toggler-icon:after {
+        transition: all 500ms ease-in-out;
+      }
+     .navbar-toggler-icon.active {
+        background-color: transparent;
+      }
+     .navbar-toggler-icon.active:before,
+     .navbar-toggler-icon.active:after {
+        top: 0;
+      }
+     .navbar-toggler-icon.active:before {
+        transform: rotate(45deg);
+      }
+     .navbar-toggler-icon.active:after {
+        transform: rotate(-45deg);
+      }
+      // .navbar-toggler-icon {
+      //   width: 25px;
+      //   height: 2px;
+      //   background: #08080c;
+      //   display: block;
+      //   position: relative;
+
+      //   &:before {
+      //     content: "";
+      //     position: absolute;
+      //     top: 0;
+      //     left: 0px;
+      //     border-bottom: 2px solid #08080c;
+      //     width: 25px;
+      //     height: 8px;
+      //   }
+
+      //   &:after {
+      //     content: "";
+      //     position: absolute;
+      //     bottom: 0;
+      //     left: 0px;
+      //     border-top: 2px solid #08080c;
+      //     width: 25px;
+      //     height: 8px;
+      //   }
+      // }
     }
 
     ul {

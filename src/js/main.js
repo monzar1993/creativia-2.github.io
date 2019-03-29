@@ -1,7 +1,10 @@
 $(document).ready(function () {
 
+
+
     // navigation-toggle
     $('.navbar-toggler').click(function () {
+        $('.navbar-toggler-icon').toggleClass('active');
         $('.navbar-nav').slideToggle(500, 'linear');
         $('.navbar-nav').css({ 'display': 'flex !important' });
         return false;

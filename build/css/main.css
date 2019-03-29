@@ -2528,32 +2528,41 @@ header {
           border-radius: 15%;
           margin-top: 10px;
           margin-left: 10px;
-          padding-bottom: 0; } }
+          padding-bottom: 3.5px; } }
       @media (max-width: 575px) {
         header .navbar .navbar-toggler {
           margin-left: 10px; } }
-      header .navbar .navbar-toggler .navbar-toggler-icon {
+      header .navbar .navbar-toggler .navbar-toggler-icon,
+      header .navbar .navbar-toggler .navbar-toggler-icon:before,
+      header .navbar .navbar-toggler .navbar-toggler-icon:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 3px;
         width: 25px;
-        height: 2px;
-        background: #08080c;
+        background: #000;
+        position: absolute;
         display: block;
-        position: relative; }
-        header .navbar .navbar-toggler .navbar-toggler-icon:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0px;
-          border-bottom: 2px solid #08080c;
-          width: 25px;
-          height: 8px; }
-        header .navbar .navbar-toggler .navbar-toggler-icon:after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0px;
-          border-top: 2px solid #08080c;
-          width: 25px;
-          height: 8px; }
+        content: ""; }
+      header .navbar .navbar-toggler .navbar-toggler-icon:before {
+        top: -9px; }
+      header .navbar .navbar-toggler .navbar-toggler-icon:after {
+        bottom: -9px; }
+      header .navbar .navbar-toggler .navbar-toggler-icon,
+      header .navbar .navbar-toggler .navbar-toggler-icon:before,
+      header .navbar .navbar-toggler .navbar-toggler-icon:after {
+        -webkit-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out; }
+      header .navbar .navbar-toggler .navbar-toggler-icon.active {
+        background-color: transparent; }
+      header .navbar .navbar-toggler .navbar-toggler-icon.active:before,
+      header .navbar .navbar-toggler .navbar-toggler-icon.active:after {
+        top: 0; }
+      header .navbar .navbar-toggler .navbar-toggler-icon.active:before {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      header .navbar .navbar-toggler .navbar-toggler-icon.active:after {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg); }
     header .navbar ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2908,9 +2917,9 @@ header {
             padding: 10px 90px 10px 10px;
             margin: 0;
             text-align: left; }
-            @media (max-width: 424px) {
+            @media (max-width: 575px) {
               .about-creativia .middle-part .middle-left .cards .card .toggle-button {
-                padding: 10px 30px 10px 10px;
+                padding: 10px;
                 font-size: 18px; } }
             .about-creativia .middle-part .middle-left .cards .card .toggle-button .fa-plus {
               border: 1px solid #505050;
@@ -2959,7 +2968,8 @@ header {
           margin-bottom: 0; } }
       @media (max-width: 424px) {
         .about-creativia .middle-part .middle-right {
-          height: 250px; } }
+          height: 250px;
+          margin-bottom: -40px; } }
       .about-creativia .middle-part .middle-right .hex-image {
         width: 346px;
         height: 299px;
@@ -2976,7 +2986,8 @@ header {
             margin: 20px auto; } }
         @media (max-width: 424px) {
           .about-creativia .middle-part .middle-right .hex-image {
-            width: 200px;
+            height: 200px;
+            width: 170px;
             margin: 0 auto; } }
         .about-creativia .middle-part .middle-right .hex-image.front-img {
           background: transparent url("../image/img-first-about-us.png") no-repeat;
@@ -3322,15 +3333,11 @@ header {
     justify-content: space-between; }
     @media (max-width: 1199px) {
       .our-product-features .our-product-features-main-part {
-        margin-bottom: 210px;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; } }
-    @media (max-width: 991px) {
-      .our-product-features .our-product-features-main-part {
-        margin-bottom: 110px; } }
     @media (max-width: 575px) {
       .our-product-features .our-product-features-main-part {
         margin-top: 40px;
@@ -3461,9 +3468,12 @@ header {
       @media (max-width: 991px) {
         .our-product-features .our-product-features-main-part .main-part-middle {
           margin-bottom: 40px; } }
+      @media (max-width: 473px) {
+        .our-product-features .our-product-features-main-part .main-part-middle {
+          height: 470px; } }
       @media (max-width: 424px) {
         .our-product-features .our-product-features-main-part .main-part-middle {
-          height: 450px; } }
+          height: 340px; } }
       .our-product-features .our-product-features-main-part .main-part-middle .middle-part-bg-img {
         position: absolute;
         top: 0;
@@ -3495,10 +3505,13 @@ header {
         box-shadow: none; }
         @media (max-width: 575px) {
           .our-product-features .our-product-features-main-part .main-part-middle .middle-part-btn {
-            bottom: 13%; } }
+            bottom: 17%; } }
+        @media (max-width: 473px) {
+          .our-product-features .our-product-features-main-part .main-part-middle .middle-part-btn {
+            bottom: 14%; } }
         @media (max-width: 424px) {
           .our-product-features .our-product-features-main-part .main-part-middle .middle-part-btn {
-            bottom: 26%; } }
+            bottom: 6%; } }
         .our-product-features .our-product-features-main-part .main-part-middle .middle-part-btn:hover {
           background: #ff0036;
           -webkit-box-shadow: none;
@@ -3599,7 +3612,7 @@ header {
               bottom: -75%; } }
           @media (max-width: 575px) {
             .our-clients .our-clients-middle-part .our-clients-middle-left .our-clients-slider .slick-dots {
-              bottom: -90%; } }
+              bottom: -110%; } }
           @media (max-width: 424px) {
             .our-clients .our-clients-middle-part .our-clients-middle-left .our-clients-slider .slick-dots {
               bottom: -120%; } }
@@ -4683,8 +4696,9 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around; }
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
     .find-us-here .find-us-here-middle-part #googlemaps {
       height: 100%;
       width: 100%;
@@ -4701,12 +4715,15 @@ header {
       margin-left: 10%;
       padding: 0;
       width: 300px; }
-      @media (max-width: 767px) {
-        .find-us-here .find-us-here-middle-part .marker {
-          display: none; } }
       @media (max-width: 991px) {
         .find-us-here .find-us-here-middle-part .marker {
-          margin-left: 50px; } }
+          margin-left: 10%; } }
+      @media (max-width: 879px) {
+        .find-us-here .find-us-here-middle-part .marker {
+          margin-left: 2%; } }
+      @media (max-width: 800px) {
+        .find-us-here .find-us-here-middle-part .marker {
+          display: none; } }
       .find-us-here .find-us-here-middle-part .marker ul {
         background: #262626;
         color: #fff;
@@ -4731,7 +4748,7 @@ header {
           -webkit-transform: rotate(200deg);
           transform: rotate(200deg); }
     .find-us-here .find-us-here-middle-part .contact-form {
-      margin-top: 100px;
+      margin-top: 105px;
       padding: 0;
       margin-right: 10%;
       z-index: 1;
@@ -4740,12 +4757,9 @@ header {
       @media (max-width: 991px) {
         .find-us-here .find-us-here-middle-part .contact-form {
           margin-right: 10px; } }
-      @media (max-width: 767px) {
+      @media (max-width: 800px) {
         .find-us-here .find-us-here-middle-part .contact-form {
           margin: 20px auto; } }
-      @media (min-width: 1200px) {
-        .find-us-here .find-us-here-middle-part .contact-form {
-          margin-left: 131px; } }
       .find-us-here .find-us-here-middle-part .contact-form form {
         background: #fff;
         -webkit-box-shadow: 0 0 9px rgba(5, 5, 6, 0.17);

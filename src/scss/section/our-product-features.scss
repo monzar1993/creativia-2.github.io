@@ -43,13 +43,11 @@
     justify-content: space-between;
 
     @media (max-width: 1199px) {
-      margin-bottom: 210px;
       flex-wrap: wrap;
       justify-content: center;
     }
 
     @media (max-width: 991px) {
-      margin-bottom: 110px;
     }
 
     @media (max-width: 575px) {
@@ -215,9 +213,13 @@
       @media (max-width: 991px) {
         margin-bottom: 40px;
       }
+      
+      @media (max-width: 473px) {
+        height: 470px;
+      }
 
       @media (max-width: 424px) {
-        height: 450px;
+        height: 340px;
       }
 
       .middle-part-bg-img {
@@ -251,11 +253,15 @@
         box-shadow: none;
 
         @media (max-width: 575px) {
-          bottom: 13%;
+          bottom: 17%;
+        }
+
+        @media (max-width: 473px) {
+          bottom: 14%;
         }
 
         @media (max-width: 424px) {
-          bottom: 26%;
+          bottom: 6%;
         }
 
         &:hover {
