@@ -57,9 +57,9 @@
             #color1 {
               background-color: $our-services-span;
 
-              i {
-                color: $our-services-h5;
-              }
+              // i {
+              //   color: $our-services-h5;
+              // }
             }
           }
         }
@@ -98,17 +98,47 @@
 
         #color1 {
           background-color: $our-services-color1;
+          transition: all 0.5s;
 
-          i {
-            font-size: 31px;
-            z-index: 15;
+          .sprite-icon {
             display: block;
             position: absolute;
+            z-index: 15;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: #262626;
+            width: 52px;
+            height: 47px;
+            background-image: url("../image/css_sprites.png");
+            background-repeat: no-repeat;
+
+            &.icon1 {
+              background-position-y: -54px;
+            }
+
+            &.icon3 {
+              background-position: -52px -1px;
+            }
+            &.icon4 {
+              background-position: -52px -54px;
+            }
+            &.icon5 {
+              background-position: -103px -54px;
+            }
+            &.icon6 {
+              background-position: -103px -2px;
+            }
           }
+          // i {
+          //   font-size: 31px;
+          //   z-index: 15;
+          //   display: block;
+          //   position: absolute;
+          //   top: 50%;
+          //   left: 50%;
+          //   transform: translate(-50%, -50%);
+          //   color: #262626;
+          // }
         }
 
         .hexagon-wrapper {
@@ -150,6 +180,7 @@
         width: 550px;
         background-color: $our-services-contents;
         text-align: justify;
+        transition: all 0.5s;
 
         @media (max-width: 991px) {
           width: 540px;

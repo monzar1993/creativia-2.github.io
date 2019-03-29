@@ -293,9 +293,22 @@
       }
     }
 
+    @keyframes jump-up {
+        0% {
+          transform: translateY(0%);
+        }
+        50% {
+          transform: translateY(-50%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
     .hexagon {
       display: inline-block;
       cursor: pointer;
+      animation: jump-up .5s ease-out 2s;
+
 
       &:hover .box-left {
         border-right: 28px solid $about-creativia-hex-color;
@@ -337,6 +350,7 @@
           border-right: 26px solid $about-creativia-hex-i-color;
           border-top: 41px solid transparent;
           border-bottom: 40px solid transparent;
+          transition: 1s;
         }
       }
       .box-middle {
@@ -355,10 +369,12 @@
           width: 47px;
           height: 82px;
           background-color: $about-creativia-hex-i-color;
+          transition: 1s;
 
           i {
             font-size: 40px;
             color: $about-creativia-box-bg;
+            transition: 1s;
           }
         }
       }
@@ -376,6 +392,7 @@
           border-left: 26px solid $about-creativia-hex-i-color;
           border-top: 41px solid transparent;
           border-bottom: 40px solid transparent;
+          transition: 1s;
         }
       }
     }

@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-
-
     // navigation-toggle
     $('.navbar-toggler').click(function () {
         $('.navbar-toggler-icon').toggleClass('active');
